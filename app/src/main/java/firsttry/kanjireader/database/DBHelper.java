@@ -714,7 +714,8 @@ public class DBHelper extends SQLiteOpenHelper {
 //                READING_COLUMN_AUTHOR + " = '" + author + "' AND " +
 //                READING_COLUMN_PART + " = '" + part + "'", null);
 //        res.moveToFirst();
-
+        
+        // reduces the amount of lines
         Cursor res = mDb.rawQuery("select rid from Reading where title = '" + title + "' and author = '" +
                                         author + "' and part = '" + part + "'", null);
         res.moveToFirst();
