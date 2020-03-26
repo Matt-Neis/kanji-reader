@@ -709,10 +709,14 @@ public class DBHelper extends SQLiteOpenHelper {
     private int getReadingRowid(String title, String author, String part) {
         int rid = -1;
 
-        Cursor res = mDb.rawQuery("SELECT " + READING_COLUMN_RID + " FROM " + READING_TABLE_NAME +
-                " WHERE " + READING_COLUMN_TITLE + " = '" + title + "' AND " +
-                READING_COLUMN_AUTHOR + " = '" + author + "' AND " +
-                READING_COLUMN_PART + " = '" + part + "'", null);
+//        Cursor res = mDb.rawQuery("SELECT " + READING_COLUMN_RID + " FROM " + READING_TABLE_NAME +
+//                " WHERE " + READING_COLUMN_TITLE + " = '" + title + "' AND " +
+//                READING_COLUMN_AUTHOR + " = '" + author + "' AND " +
+//                READING_COLUMN_PART + " = '" + part + "'", null);
+//        res.moveToFirst();
+
+        Cursor res = mDb.rawQuery("select rid from Reading where title = '" + title + "' and author = '" +
+                                        author + "' and part = '" + part + "'", null);
         res.moveToFirst();
 
         while (!res.isAfterLast()) {
