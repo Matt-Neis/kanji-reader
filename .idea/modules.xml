@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KanjiReader.iml" filepath="$PROJECT_DIR$/KanjiReader.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="kanji-reader/app" />
+      <module fileurl="file://$PROJECT_DIR$/kanji-reader.iml" filepath="$PROJECT_DIR$/kanji-reader.iml" group="kanji-reader" />
     </modules>
   </component>
 </project>
